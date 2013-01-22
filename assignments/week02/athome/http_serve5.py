@@ -118,7 +118,7 @@ while True: # keep looking for new connections forever
 	#print uri
         if uri == '/time-page':
             response = get_timePage()
-	    type = get_mimetype("web/timepage.html")
+	    type = get_mimetype("web/time-page.html")
             newData = ok_response(response, serverName, type, date)
         else:
 	    uri_response = resolve_uri(uri)
