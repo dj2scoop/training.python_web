@@ -1,0 +1,17 @@
+John Comstock
+Week Two
+01/21/2013
+
+I was able to accomplish everything except for making the directories clickable links or format my directory listing as HTML.
+
+I have a few error responses and I have the URI /time-page available. I created my own HTML 404 page. Nothing fancy though. I was going to try and return the requested URI in the 404 page, but hadn't got around to it.
+
+The code is a mess. I was also planning on moving the response codes to another class, but have run out of time.
+
+You can ping my server http://block647045-6ca.blueboxgrid.com:50000 it should be running at this time.
+
+Haven't addressed the 404 Error for not returning the favicon.ico that is requested each time, but it seems to work otherwise.
+
+Had a fun time with this one. Learning quite a bit this quarter already. Thanks!
+
+-John
