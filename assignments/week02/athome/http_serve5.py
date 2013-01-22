@@ -89,7 +89,6 @@ def get_maintype(contentType):
 
 def get_timePage():
     response = getFile("web/time-page.html", 'r')
-    type = get_mimetype("web/time-page.html")
     newResponse = response.split()
     newResponse[2] = '<h1>%s</h1>'%date
     return ''.join(newResponse)
@@ -119,6 +118,7 @@ while True: # keep looking for new connections forever
 	#print uri
         if uri == '/time-page':
             response = get_timePage()
+	    type = get_mimetype("web/timepage.html")
             newData = ok_response(response, serverName, type, date)
         else:
 	    uri_response = resolve_uri(uri)
