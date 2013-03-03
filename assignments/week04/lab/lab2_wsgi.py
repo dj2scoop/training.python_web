@@ -23,12 +23,12 @@ The request arrived at %s<br>
 def application(environ, start_response):
     response_body = body % (
          environ.get('SERVER_NAME', 'Unset'), # server name
-         'aaaa', # server IP
-         'bbbb', # server port
-         'cccc', # client IP
-         'dddd', # client port
-         'eeee', # this script name
-         'ffff', # time
+         environ.get('HOST_ADDR', 'Supposed to be the Server_IP'), # server IP
+         environ.get('SERVER_PORT', 'Supposed to be the Server_Port'), # server port
+         environ.get('HTTP_ADDR', 'Supposed to be the Client_IP'), # client IP
+         environ.get('HTTP_PORT', 'Supposed to be the Client_Port'), # client port
+         environ.get('SCRIPT_NAME', 'Supposed to be the Script_Name'), # this script name
+         datetime.datetime.now(), # time
          )
     status = '200 OK'
 
